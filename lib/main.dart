@@ -55,7 +55,8 @@ class _WebViewAppState extends State<WebViewApp> {
           },
         ),
       )
-      ..loadRequest(Uri.parse('https://bandiboodi.com'));
+      ..loadRequest(Uri.parse('https://bandiboodi.com'))
+      ..setUserAgent('random');
 
     if (controller.platform is WebKitWebViewController) {
       (controller.platform as WebKitWebViewController)
