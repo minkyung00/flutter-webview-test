@@ -56,6 +56,11 @@ class _WebViewAppState extends State<WebViewApp> {
         ),
       )
       ..loadRequest(Uri.parse('https://bandiboodi.com'));
+
+    if (controller.platform is WebKitWebViewController) {
+      (controller.platform as WebKitWebViewController)
+          .setAllowsBackForwardNavigationGestures(true);
+    }
   }
 
   @override
